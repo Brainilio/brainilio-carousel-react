@@ -18,6 +18,7 @@ h5,
 h6 {
 	padding: 0;
 	margin: 0;
+	font-weight: 500;
 }
 
 h1 {
@@ -64,55 +65,66 @@ p {
 	width: 100%;
 	position: relative;
 	box-sizing: border-box;
-	padding: 0 2.5em;
-	pointer-events: none;
+	overflow-x: scroll;
+	scroll-behavior: smooth;
+	cursor: grab;
+	scrollbar-width: none;
+	scroll-snap-type: x mandatory;
 }
 
 .carousel-scrollable-area {
 	position: relative;
 	width: fit-content;
 	display: flex;
-	overflow-x: scroll;
-	scroll-behavior: smooth;
 }
 
-.carousel-wrapper :before {
+.carousel-scrollable-area :before {
 	content: "";
-	position: absolute;
 	z-index: 1;
 	left: 0;
-
-	height: 100%;
+	position: fixed;
+	height: inherit;
 	width: 25%;
+	opacity: 0.3;
 	background: linear-gradient(
-		to right,
-		rgba(0, 0, 0, 0),
-		rgba(255, 255, 255, 0.747)
+		to left,
+		transparent 50%,
+		rgba(255, 255, 255) 100%
 	);
 }
 
-.carousel-wrapper :after {
+.carousel-scrollable-area ::after {
 	content: "";
-	position: absolute;
+	position: fixed;
 	z-index: 1;
-	bottom: 0;
 	right: 0;
-	width: 10%;
-	height: 100%;
+	width: 25%;
+	height: inherit;
+	opacity: 0.3;
 	background: linear-gradient(
-		to left,
-		rgb(255, 255, 255),
-		rgba(255, 255, 255, 0)
+		to right,
+		transparent 50%,
+		rgba(255, 255, 255) 100%
 	);
+}
+
+.carousel-scrollable-area.fullscreen .picture-wrapper {
+	cursor: grab;
+	width: 100%;
+	margin: 0;
+}
+
+.carousel-scrollable-area.fullscreen .picture-wrapper img {
+	width: 100%;
 }
 
 .picture-wrapper {
 	flex-shrink: 0;
 	width: 500px;
 	height: 500px;
-	margin: 0 1.5em;
 	box-sizing: border-box;
 	overflow: hidden;
+	margin: 0 2em;
 }
 
 .picture-wrapper img {
