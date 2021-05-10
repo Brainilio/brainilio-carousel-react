@@ -83,7 +83,7 @@ const App = () => {
 			</div>
 			<div className="carousel-section-body">
 				<div className="carousel-wrapper" ref={containerToScroll}>
-					<div className="carousel-scrollable-area fullscreen">
+					<div className="carousel-scrollable-area">
 						{imageArray.map((img) => (
 							<Picture key={img.id} src={img.img} alt={img.alt} />
 						))}

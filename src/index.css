@@ -70,6 +70,7 @@ p {
 	cursor: grab;
 	scrollbar-width: none;
 	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
 }
 
 .carousel-scrollable-area {
@@ -125,6 +126,7 @@ p {
 	box-sizing: border-box;
 	overflow: hidden;
 	margin: 0 2em;
+	scroll-snap-align: start;
 }
 
 .picture-wrapper img {
@@ -141,4 +143,21 @@ p {
 	-moz-transform: scale(1.1);
 	-webkit-transform: scale(1.1);
 	transform: scale(1.1);
+}
+
+@media screen and (max-width: 600px) {
+	.vertical-text {
+		position: absolute;
+		transform: rotate(0deg);
+		left: 50%;
+
+		transform: translateX(-50%);
+	}
+	.carousel-scrollable-area :before {
+		display: none;
+	}
+
+	.carousel-scrollable-area ::after {
+		display: none;
+	}
 }

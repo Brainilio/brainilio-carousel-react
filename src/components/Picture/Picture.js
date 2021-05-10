@@ -4,7 +4,7 @@ import propTypes from "prop-types"
 const Picture = ({ src, type = "image/webp", alt }) => {
 	return (
 		<div className="picture-wrapper">
-			<img src={src} alt={alt} type={type} />
+			<img draggable="false" src={src} alt={alt} type={type} />
 		</div>
 	)
 }
