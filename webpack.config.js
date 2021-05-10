@@ -22,6 +22,14 @@ module.exports = {
 	module: {
 		rules: [
 			{
+				test: /\.(gif|png|webp|jpe?g)$/, //Customise according to your need
+				use: [
+					{
+						loader: "url-loader",
+					},
+				],
+			},
+			{
 				test: /\.(js|jsx)/,
 				include: path.resolve(__dirname, "src"),
 				exclude: /node_modules/,

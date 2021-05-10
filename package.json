@@ -27,7 +27,9 @@
 		"eslint-watch": "^7.0.0",
 		"file-loader": "^6.2.0",
 		"mini-css-extract-plugin": "^1.6.0",
+		"prop-types": "^15.7.2",
 		"style-loader": "^2.0.0",
+		"url-loader": "^4.1.1",
 		"webpack-cli": "^4.7.0",
 		"webpack-dev-server": "^3.11.2"
 	}
