@@ -1,5 +1,6 @@
 import React from "react"
 import propTypes from "prop-types"
+import "./Picture.css"
 
 const Picture = ({ src, type = "image/webp", alt }) => {
 	return (

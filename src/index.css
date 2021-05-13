@@ -42,13 +42,6 @@ p {
 	position: relative;
 }
 
-.vertical-text {
-	position: fixed;
-	transform: rotate(-90deg);
-	left: 0%;
-	top: 15%;
-}
-
 .carousel-section-header {
 	text-align: center;
 	display: flex;
@@ -80,195 +73,43 @@ p {
 	font-size: 80%;
 }
 
-.carousel-section-body {
-	margin: 2.5em 0;
-	width: 100%;
+.previous-button {
+	width: 100px;
+	height: 25px;
+	background: none;
+	border: 1px solid black;
+	font-family: inherit;
+	font-size: inherit;
+	cursor: pointer;
+	transition: all 0.2s linear;
+	margin: 2em;
+}
+
+.previous-button:hover {
+	background: black;
+	color: white;
+	border: 1px solid black;
+}
+
+.next-button {
+	width: 100px;
+	height: 25px;
+	background: none;
+	border: 1px solid black;
+	font-family: inherit;
+	font-size: inherit;
+	cursor: pointer;
+	transition: all 0.2s linear;
+	margin: 2em;
+}
+
+.next-button:hover {
+	background: black;
+	color: white;
+	border: 1px solid black;
+}
+
+.carousel-two-buttons {
 	display: flex;
 	justify-content: center;
-	position: relative;
-	flex-direction: column;
-}
-
-.carousel-wrapper {
-	flex-shrink: 0;
-	width: 100%;
-	position: relative;
-	box-sizing: border-box;
-	overflow-x: scroll;
-	scroll-behavior: smooth;
-	scrollbar-width: none;
-	scroll-snap-type: x mandatory;
-	scroll-behavior: smooth;
-	display: flex;
-	flex-direction: column;
-}
-
-.slider__dots {
-	display: flex;
-	align-items: center;
-	justify-content: space-evenly;
-	margin: 1.5em auto;
-	width: 250px;
-}
-
-.slider__dot {
-	width: 15px;
-	height: 15px;
-	background-color: rgba(0, 0, 0, 0.5);
-	border-radius: 50%;
-	transition: all 0.3s ease-in-out;
-}
-
-.slider__indicator {
-	width: 20px;
-	height: 20px;
-	background-color: black;
-	border-radius: 50%;
-	transition: all 0.3s ease-in-out;
-}
-
-.carousel-scrollable-area {
-	position: relative;
-	width: fit-content;
-	display: flex;
-}
-
-.carousel-scrollable-area :before {
-	content: "";
-	z-index: 1;
-	left: 0;
-	position: fixed;
-	height: inherit;
-	width: 25%;
-	opacity: 0.3;
-	background: linear-gradient(
-		to left,
-		transparent 50%,
-		rgba(255, 255, 255) 100%
-	);
-	display: none;
-}
-
-.carousel-scrollable-area ::after {
-	content: "";
-	position: fixed;
-	z-index: 1;
-	right: 0;
-	width: 25%;
-	height: inherit;
-	opacity: 0.3;
-	background: linear-gradient(
-		to right,
-		transparent 50%,
-		rgba(255, 255, 255) 100%
-	);
-	display: none;
-}
-
-.carousel-scrollable-area.fullscreen .picture-wrapper {
-	width: 100%;
-	margin: 0;
-}
-
-.carousel-scrollable-area.fullscreen .picture-wrapper img {
-	width: 100%;
-}
-
-.picture-wrapper {
-	flex-shrink: 0;
-	width: 500px;
-	height: 500px;
-	box-sizing: border-box;
-	overflow: hidden;
-	margin: 0 2em;
-	scroll-snap-align: start;
-}
-
-.picture-wrapper img {
-	width: 500px;
-	height: 500px;
-	object-fit: cover;
-	object-position: center;
-	-moz-transition: all 0.3s;
-	-webkit-transition: all 0.3s;
-	transition: all 0.3s linear;
-}
-
-.picture-wrapper:hover img {
-	-moz-transform: scale(1.1);
-	-webkit-transform: scale(1.1);
-	transform: scale(1.1);
-}
-
-.card {
-	flex-shrink: 0;
-	width: 350px;
-	height: 450px;
-	box-shadow: 5px 8px 25px rgba(0, 0, 0, 0.3);
-	margin: 2em;
-	transition: all 0.3s linear;
-	cursor: pointer;
-}
-
-.card-header {
-	height: 200px;
-	background: url("./images/image-4.webp") center/cover;
-}
-
-.card-body h3 {
-	padding-bottom: 0.5em;
-}
-
-.card-body {
-	height: 200px;
-	padding: 1.5em;
-	box-sizing: border-box;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-}
-
-.card-body span {
-	font-size: 80%;
-	align-self: baseline;
-	opacity: 0.8;
-}
-
-.card-footer {
-	display: flex;
-	align-items: center;
-	padding: 1.5em;
-	height: 50px;
-	box-sizing: border-box;
-	border-top: 1px solid rgba(0, 0, 0, 0.692);
-	justify-content: space-between;
-}
-
-.card-footer img {
-	transition: all 0.1s linear;
-}
-
-.card:hover {
-	box-shadow: 5px 8px 50px rgba(0, 0, 0, 0.37);
-}
-
-.card:hover .card-footer img {
-	transform: translateX(5px);
-}
-
-@media screen and (max-width: 600px) {
-	.vertical-text {
-		position: absolute;
-		transform: rotate(0deg);
-		left: 50%;
-
-		transform: translateX(-50%);
-	}
-	.carousel-scrollable-area :before {
-		display: none;
-	}
-
-	.carousel-scrollable-area ::after {
-		display: none;
-	}
 }

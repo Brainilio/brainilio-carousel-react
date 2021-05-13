@@ -1,0 +1,55 @@
+.carousel-two-wrapper {
+	display: flex;
+	flex-direction: column;
+	width: 100vw;
+	overflow: hidden;
+}
+
+.carousel-two {
+	position: relative;
+	width: fit-content;
+	display: flex;
+}
+
+.image-wrapper {
+	flex-shrink: 0;
+	display: flex;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.carousel-image {
+	width: 500px;
+	height: 500px;
+	margin: 2em;
+	object-fit: cover;
+}
+
+.carousel-image.fullscreen {
+	width: 100vw;
+	margin: 0;
+}
+
+.slider-dots {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	margin: 1.5em auto;
+	width: 250px;
+}
+
+.slider-dot {
+	width: 15px;
+	height: 15px;
+	background-color: rgba(0, 0, 0, 0.5);
+	border-radius: 50%;
+	transition: all 0.3s ease-in-out;
+}
+
+.slider-indicator {
+	width: 20px;
+	height: 20px;
+	background-color: black;
+	border-radius: 50%;
+	transition: all 0.3s ease-in-out;
+}

@@ -1,5 +1,6 @@
 import React from "react"
 import rightArrow from "../../images/right.png"
+import "./Card.css"
 
 const Card = () => {
 	return (

@@ -1,0 +1,39 @@
+.carousel-section-body {
+	margin: 2.5em 0;
+	box-sizing: border-box;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	position: relative;
+	flex-direction: column;
+}
+
+.carousel-wrapper {
+	flex-shrink: 0;
+	width: 100%;
+	position: relative;
+	box-sizing: border-box;
+	overflow-x: scroll;
+	scroll-behavior: smooth;
+	scrollbar-width: none;
+	/* handles the scroll snapping */
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	display: flex;
+	flex-direction: column;
+}
+
+.carousel-scrollable-area {
+	position: relative;
+	width: fit-content;
+	display: flex;
+}
+
+.carousel-scrollable-area.fullscreen .picture-wrapper {
+	width: 100%;
+	margin: 0;
+}
+
+.carousel-scrollable-area.fullscreen .picture-wrapper img {
+	width: 100%;
+}
