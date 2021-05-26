@@ -37,7 +37,7 @@ All files will be built and outputted in the `/build` directory
 
 # Deployed on:
 
-https://awesome-turing-7393f4.netlify.app/
+https://modest-sammet-21782a.netlify.app/
 
 # V1 In action:
 
